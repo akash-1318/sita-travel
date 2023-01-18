@@ -1,0 +1,30 @@
+.post-main-container {
+  padding: 2rem;
+  margin-top: 6rem;
+  width: 80%;
+  letter-spacing: 1.5px;
+  background-color: #acdfd775;
+  border-radius: 5px;
+  border-bottom: 2px solid #7ca69f;
+}
+
+.post-title {
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.post-details {
+  text-align: left;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.show-detail-btn {
+  margin-top: 2rem;
+}
+
+.post-footer {
+  display: flex;
+  justify-content: end;
+}

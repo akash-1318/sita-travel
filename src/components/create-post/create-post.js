@@ -1,4 +1,5 @@
 import "./create-post.css";
+import { Post } from "../posts/post";
 
 function CreatePost() {
   return (
@@ -11,6 +12,8 @@ function CreatePost() {
       <button className="post-btn">Add new post</button>
       <p className="sub-text">Or</p>
       <button className="fetch-btn">Show existing posts</button>
+      {/* <Post /> */}
+      <p className="no-post-text">No post available!!</p>
     </div>
   );
 }

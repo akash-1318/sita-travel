@@ -26,7 +26,8 @@
 }
 
 .post-btn,
-.fetch-btn {
+.fetch-btn,
+.show-detail-btn {
   padding: 1rem 3rem;
   font-size: 1.5rem;
   outline: none;
@@ -43,4 +44,9 @@
 .sub-text {
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.no-post-text {
+  font-size: 2.5rem;
+  margin-top: 6rem;
 }
