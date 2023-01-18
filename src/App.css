@@ -1,1 +1,7 @@
 @import url(styles/common.css);
+
+.main-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #7ca69f;
+}
