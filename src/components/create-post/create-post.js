@@ -48,7 +48,13 @@ function CreatePost() {
           })
         }
       ></textarea>
-      <button className="post-btn" onClick={() => handleAddPost()}>
+      <button
+        className="post-btn"
+        onClick={() => {
+          if (initialCreatedPost.title !== "" && initialCreatedPost.body !== "")
+            handleAddPost();
+        }}
+      >
         Add new post
       </button>
       <p className="sub-text">Or</p>
