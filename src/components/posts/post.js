@@ -1,20 +1,30 @@
 import "./post.css";
+import { useSelector, useDispatch } from "react-redux";
+import { getSinglePostData } from "../../features/postSlice";
 
-function Post() {
+function Post({ post }) {
+  const { singlePost } = useSelector((store) => {
+    return store.post;
+  });
+  const dispatch = useDispatch();
+  const { id, title } = post;
+  const { id: postId, body } = singlePost;
   return (
     <div className="post-main-container">
       <p className="post-title">
-        sunt aut facere repellat provident occaecati excepturi optio
-        reprehenderit
+        {id} {title}
       </p>
-      <p className="post-details">
-        quia et suscipit suscipit recusandae consequuntur expedita et cum
-        reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt
-        rem eveniet architecto
-      </p>
-      {/* <div className="post-footer">
-        <button className="show-detail-btn">Show detail</button>
-      </div> */}
+      <p className="post-details">{id === postId && body}</p>
+      <div className="post-footer">
+        {id !== postId && (
+          <button
+            className="show-detail-btn"
+            onClick={() => dispatch(getSinglePostData(id))}
+          >
+            Show detail
+          </button>
+        )}
+      </div>
     </div>
   );
 }
