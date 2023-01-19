@@ -23,6 +23,8 @@ function CreatePost() {
     dispatch(createPostHandler(initialCreatedPost));
   };
 
+  const finalPostList = [...createdPost, ...allPosts];
+
   return (
     <div className="primary-container">
       <input
@@ -53,9 +55,9 @@ function CreatePost() {
       <button className="fetch-btn" onClick={() => dispatch(getAllPostsData())}>
         Show existing posts
       </button>
-      {[...(createdPost || []), ...(allPosts || [])]?.length > 0 ? (
+      {finalPostList?.length > 0 ? (
         <>
-          {[...createdPost, ...allPosts]?.map((post) => {
+          {finalPostList?.map((post) => {
             return (
               <Post key={post?.id} post={post} createdPost={createdPost} />
             );
