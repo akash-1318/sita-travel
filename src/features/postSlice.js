@@ -44,7 +44,6 @@ export const postSlice = createSlice({
       state.postStatus = "pending";
     },
     [getAllPostsData.fulfilled]: (state, action) => {
-      console.log(state.status);
       state.postStatus = "fulfilled";
       state.allPosts = action.payload;
     },
